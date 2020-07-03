@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Android Chip Extractor</name>
+  <author>KwangisKhan</author>
+  <supportedVersions>
+	<li>1.1</li>
+  </supportedVersions>
+  <modDependencies>
+	<li>
+		<packageId>Atlas.AndroidTiers</packageId>
+		<displayName>Android tiers</displayName>
+		<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=1918589742</steamWorkshopUrl>
+	</li>
+  </modDependencies>
+  <packageId>Kwang.androidtiers</packageId>
+  <description><![CDATA[  
+Adds a way to extract control chips off dead androids.
+
+Version <color=#FFD800>1.0.2</color>
+	]]>
+  </description>
+</ModMetaData>
