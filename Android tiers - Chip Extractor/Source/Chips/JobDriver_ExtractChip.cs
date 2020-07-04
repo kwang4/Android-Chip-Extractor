@@ -52,35 +52,35 @@ namespace Chips
             {
               HediffDef h = DefDatabase<HediffDef>.GetNamed("ATPP_HediffVX3Chip");
             if(!corruptedChip)
-              GenSpawn.Spawn(ThingDefOf.ATPP_VX3Chip, innerPawn.Position, Corpse.Map);
+              GenSpawn.Spawn(ThingDefOf.ATPP_VX3Chip, Corpse.Position, Corpse.Map);
               finExtract(innerPawn, h);
             }
             else if (innerPawn.health.hediffSet.HasHediff(MOARANDROIDS.Utils.hediffHaveVX2Chip))
             {
                 HediffDef h = DefDatabase<HediffDef>.GetNamed("ATPP_HediffVX2Chip");
                 if (!corruptedChip)
-                    GenSpawn.Spawn(ThingDefOf.ATPP_VX2Chip, innerPawn.Position, Corpse.Map);
+                    GenSpawn.Spawn(ThingDefOf.ATPP_VX2Chip, Corpse.Position, Corpse.Map);
                 finExtract(innerPawn, h);
             }
             else if(innerPawn.health.hediffSet.HasHediff(MOARANDROIDS.Utils.hediffHaveVX1Chip))
             {
                 HediffDef h = DefDatabase<HediffDef>.GetNamed("ATPP_HediffVX1Chip");
                 if (!corruptedChip)
-                    GenSpawn.Spawn(ThingDefOf.ATPP_VX1Chip, innerPawn.Position, Corpse.Map);
+                    GenSpawn.Spawn(ThingDefOf.ATPP_VX1Chip, Corpse.Position, Corpse.Map);
                 finExtract(innerPawn, h);
             }
             else if (innerPawn.health.hediffSet.HasHediff(MOARANDROIDS.Utils.hediffHaveVX0Chip))
             {
                 HediffDef h = DefDatabase<HediffDef>.GetNamed("ATPP_HediffVX0Chip");
                 if (!corruptedChip)
-                    GenSpawn.Spawn(ThingDefOf.ATPP_VX0Chip, innerPawn.Position, Corpse.Map);
+                    GenSpawn.Spawn(ThingDefOf.ATPP_VX0Chip, Corpse.Position, Corpse.Map);
                 finExtract(innerPawn, h);
             }
             else if (innerPawn.health.hediffSet.HasHediff(MOARANDROIDS.Utils.hediffHaveRXChip))
             {
                 HediffDef h = DefDatabase<HediffDef>.GetNamed("ATPP_HediffRXChip");
                 if (!corruptedChip)
-                    GenSpawn.Spawn(ThingDefOf.ATPP_RXChip, innerPawn.Position, Corpse.Map);
+                    GenSpawn.Spawn(ThingDefOf.ATPP_RXChip, Corpse.Position, Corpse.Map);
                 finExtract(innerPawn, h);
             }
             else
@@ -104,11 +104,11 @@ namespace Chips
             string robotornot = innerPawn.kindDef.defName.ToLower();
             if(robotornot.Contains("android")||robotornot == "m7mech"||innerPawn.kindDef.label.Contains("android"))
             {
-                x = 0.85;
+                x = 0.9;
             }
             else
             {
-                x = 0.5;
+                x = 0.7;
             }
             if (rand.NextDouble() < x)
                 return false;

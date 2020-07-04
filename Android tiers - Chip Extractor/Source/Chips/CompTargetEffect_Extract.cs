@@ -22,7 +22,7 @@ namespace Chips
                 return;
             }
             Corpse c = (Corpse)target;
-            if (c.InnerPawn.VXChipPresent())
+            if (c.InnerPawn.VXChipPresent()||c.InnerPawn.health.hediffSet.GetFirstHediffOfDef(Utils.hediffHaveRXChip)!= null)
             {
                 Job job = new Job(JobDefOf.ExtractChip, target, this.parent);
                 job.count = 1;
@@ -30,7 +30,7 @@ namespace Chips
             }
             else
             {
-                Messages.Message("No VX Chip present in the body", MessageTypeDefOf.RejectInput, true);
+                Messages.Message("No Chip present in the body", MessageTypeDefOf.RejectInput, true);
             }
         }
     } 
