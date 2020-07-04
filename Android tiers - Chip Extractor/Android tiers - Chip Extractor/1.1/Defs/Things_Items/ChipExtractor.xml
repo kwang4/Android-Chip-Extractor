@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MechSerumBase">
+    <defName>ChipExtractor</defName>
+    <label>android chip extractor</label>
+    <description>Simple tool to remove valuable microchips used to enhance androids.</description>
+    <graphicData>
+      <texPath>Things/Extractor/Extractor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <tradeability>Sellable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use chip extractor</useLabel>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SingleCorpse</compClass>
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
+      </li>
+      <li>
+        <compClass>Chips.CompTargetEffect_Extract</compClass>
+      </li>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+
+  <RecipeDef>
+      <defName>MakeChipExtractor</defName>
+      <label>Make an android chip extractor</label>
+      <description>Create a chip extractor to salvage valuable microchips.</description>
+      <jobString>Making chip extractor</jobString>
+      <allowMixingIngredients>false</allowMixingIngredients>
+      <ingredients>
+
+		 <li>
+            <filter>
+               <thingDefs>
+                  <li>Steel</li>
+               </thingDefs>
+            </filter>
+            <count>45</count>
+         </li>
+		 <li>
+            <filter>
+               <thingDefs>
+                  <li>Plasteel</li>
+               </thingDefs>
+            </filter>
+            <count>25</count>
+         </li>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>ComponentIndustrial</li>
+               </thingDefs>
+            </filter>
+            <count>5</count>
+         </li>
+      </ingredients>
+      <products>
+         <ChipExtractor>1</ChipExtractor>
+      </products>
+      <workAmount>1000</workAmount>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+	 <recipeUsers>
+		<li>AndroidPartsTable</li>
+      </recipeUsers>
+
+	</RecipeDef>
+
+</Defs>
